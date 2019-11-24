@@ -1,0 +1,11 @@
+HTTP/1.1 400 Bad Request
+Server: nginx
+Content-Type: application/ocsp-response
+Content-Length: 5
+Cache-Control: no-cache
+Expires: Sun, 24 Nov 2019 09:34:21 GMT
+Date: Sun, 24 Nov 2019 09:34:21 GMT
+Connection: close
+
+0
+
