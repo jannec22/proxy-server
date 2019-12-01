@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cp configuration.cnf src-plain/
+cd src-plain/
+java Proxy

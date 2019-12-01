@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd src-plain/
+javac Proxy.java

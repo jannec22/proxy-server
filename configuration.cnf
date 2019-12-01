@@ -1,0 +1,4 @@
+cache_expiration_delay=2
+cache_clean_task_interval=2
+proxy_port=2222
+cache_directory=cache/
