@@ -35,6 +35,23 @@ My solution consist of classes:
   - CacheFile
     - holds raw file and manages naming and expiration time of the cached file
 
+### How it works
+Basically Proxy class holds a SocketServer instnce and
+waits in a loop for arriving connections.
+
+when connection is established (accepted) a new thread is
+created with the new instance of ProxyClient.
+
+Proxy Client opens a stream from the client and reads the first line of the request.
+then it checks cache and if there is a matching not expired cache file it is returned instantly to the client.
+
+In other case ProxyClient parses url from the request and extracts host and port number of a server with the resource.
+
+Then it connects to the server and send the exact request that it received from the client.
+After that, a new stream is opened to read all the response and parallely forward it to the client and cache if possible.
+
+At the end sockets and streams are flushed and closed.
+
 # Configuration
 
 default configuration:
